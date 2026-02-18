@@ -39,7 +39,7 @@ ai-career-coach/
 └── simple_llm.py
 ```
 
-Note: .env and my_env/ are intentionally excluded from version control.
+> Note: `.env` and `my_env/` are intentionally excluded from version control.
 
 ## 🛠️ Prerequisites
 * Python 3.11 (or compatible 3.x version)
@@ -52,9 +52,10 @@ Note: .env and my_env/ are intentionally excluded from version control.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/ai-career-coach.git
+git clone https://github.com/aiedwardyi/ai-career-coach.git
 cd ai-career-coach
 ```
+
 2. Create and activate a virtual environment
 
 ```bash
@@ -67,7 +68,7 @@ my_env\Scripts\activate.bat
 
 3. Install dependencies
 
-* If you have requirements.txt:
+* Using requirements.txt:
 
 ```bash
 pip install -r requirements.txt
@@ -76,7 +77,7 @@ pip install -r requirements.txt
 * Or install core packages manually:
 
 ```bash
-pip install gradio==5.12.0 ibm-watsonx-ai==1.1.20 python-dotenv \ email-validator==2.1.1 numpy==1.26.4 pandas==2.1.4
+pip install gradio==5.12.0 ibm-watsonx-ai==1.1.20 python-dotenv email-validator==2.1.1 numpy==1.26.4 pandas==2.1.4
 ```
 
 ## 🔐 Environment Variables
@@ -89,38 +90,38 @@ IBM_WATSONX_PROJECT_ID=your_project_id_here
 MODEL_ID=meta-llama/llama-3-2-11b-vision-instruct
 ```
 
-* Do not commit .env to version control.
+* Do not commit `.env` to version control.
+* These variables are loaded in the scripts using `python-dotenv`.
 
-* These variables are loaded in the scripts using python-dotenv.
 
 ## ▶️ How to Run
 From the project root, with your virtual environment active:
 
-## General chat application
+**General chat application**
 
 ```bash
 python llm_chat.py
 ```
 
-## Resume polisher
+**Resume polisher**
 
 ```bash
 python resume_polisher.py
 ```
 
-## Cover letter generator
+**Cover letter generator**
 
 ```bash
 python cover_letter.py
 ```
 
-## Career advisor
+**Career advisor**
 
 ```bash
 python career_advisor.py
 ```
 
-## Simple Gradio demo
+**Simple Gradio demo**
 
 ```bash
 python gradio_demo.py
@@ -129,7 +130,7 @@ python gradio_demo.py
 Each script will start a local Gradio web app and print a URL (e.g., http://127.0.0.1:7860) that you can open in your browser.
 
 ## 🧪 Testing & Development Notes
-* Scripts are structured to read configuration from .env using python-dotenv.
+* Scripts are structured to read configuration from `.env` using `python-dotenv`.
 
 * Temperature and max_tokens parameters are set per use case:
 
